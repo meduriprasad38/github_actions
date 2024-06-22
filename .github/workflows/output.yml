@@ -2,7 +2,7 @@ name: output-flow
 on: [push,workflow_dispatch]
 jobs:
   output:
-    runs_on: ubuntu-latest
+    runs-on: ubuntu-latest
     steps:
       - name: githib context metadata
         run: echo "${{toJSON(github)}}"
