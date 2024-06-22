@@ -1,0 +1,17 @@
+name: first-project
+on: push
+jobs:
+  Lint:
+    runs_on: ubuntu-latest
+    steps:
+      - name: get code
+        uses: actions/checkout@v3
+      - name: install nodejs
+        uses: actions/checkout@v3
+        with:
+          node-verion= 18
+      - name: install dependencies
+        run: npm ci
+      - name: run test
+        run: npm test
+        
